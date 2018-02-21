@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/nutrikit
+
+idspace: NUTRIKIT
+base_url: /obo/nutrikit
+
+products:
+- nutrikit.owl: https://raw.githubusercontent.com/PoppinHandy/nutrition-ontology-kit/master/nutrikit.owl
+- nutrikit.obo: https://raw.githubusercontent.com/PoppinHandy/nutrition-ontology-kit/master/nutrikit.obo
+
+term_browser: ontobee
+example_terms:
+- NUTRIKIT_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/PoppinHandy/nutrition-ontology-kit/v
+
+- prefix: /tracker/
+  replacement: https://github.com/PoppinHandy/nutrition-ontology-kit/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/NUTRIKIT?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/PoppinHandy/nutrition-ontology-kit/master/
